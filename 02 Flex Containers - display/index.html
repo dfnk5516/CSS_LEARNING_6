@@ -6,7 +6,18 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
   <style>
+    .container{
+      border : 2px solid red;
+      display : flex;
+      /* display : inline-flex; */
+    }
 
+    .container .item{
+      width : 100px;
+      height : 100px;
+      border : 2px solid;
+      border-radius : 10px;
+    }
   </style>
   <template>
     Flex Container
@@ -18,9 +29,29 @@
     justify-content : 주 축(main-axis)의 정렬 방법을 설정
     align-content : 교차 축(cross axis)의 정렬 방법을 설정(2줄 이상)
     align-items : 교차 축(cross-axis)에서 Items의 정렬 방법을 설정(1줄)
+
+    display : flex / Block 특성의 Flex Container 를 정의
+    display : inline-flex / Inline 특성의 Flex Container 를 정의
+
+    두 값의 차이는 내부의 Items에는 영향을 주지 않는다
+    > 오로지 Container 자체가 Block이냐 Inline이냐의 차이!
   </template>
 </head>
 <body>
-
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
 </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+  <style>
+    .container{
+      border : 4px solid;
+      display : flex;
+    }
+    .container .item{
+      /* width : 100px; */
+      height : 100px;
+      background : tomato;
+      border : 4px dashed red;
+      border-radius : 10px;
+    }
+    .item1 {
+       flex-grow : 1;
+    }
+    .item2{
+      flex-grow : 2;
+    }
+    .item3{
+      width : 100px;
+    }
+  </style>
+  <template>
+    flex-grow : Item의 증가 너비 비율을 설정한다.
+    숫자가 크면 더 많은 너비를 가진다.
+    Item이 가변 너비가 아니거나, 값이 0일 경우 효과가 없다.
+
+    숫자 : Item의 증가 너비 비율을 설정 / 기본값 : 0
+
+    flex-grow : 증가너비;
+
+    모든 Items의 총 증가 너비(flex-grow)에서 각 Item의 증가 너비의 비율 만큼
+    너비를 가질 수 있다.
+    예를 들어 Item이 3개이고 증가 너비가 각각 1, 2, 1 이라면,
+    첫 번째 Item은 총 너비의 25%(1/4)을,
+    두 번째 Item은 총 너비의 50%(2/4)를,
+    세 번째 Item은 총 너비의 25%(1/4)을 가지게 된다.
+  </template>
+</head>
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+  </div>
+</body>
+</html>

@@ -6,13 +6,62 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
   <style>
-
+    .container{
+      border : 4px solid;
+      display : flex;
+    }
+    .container .item{
+      width : 100px;
+      height : 100px;
+      background : tomato;
+      border : 4px dashed red;
+      border-radius :10px;
+      font-size : 30px;
+      display : flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .item1{
+      order : 1;
+    }
+    .item4{
+      order : 1;
+    }
+    .item6{
+      order : -1;
+    }
   </style>
   <template>
-  
+  Flex Items
+
+  [속성]
+  order : Flex Item의 순서를 설정
+  flex : flex-grow, flex-shrink, flex-basis 의 단축 속성
+  flex-grow : Flex Item의 증가 너비 비율을 설정
+  flex-shrink : Flex Item의 감소 너비 비율을 설정
+  flex-basis : Flex Item의 (공간 배분 전) 기본 너비 설정
+  align-self : 교차 축(cross-axis)에서 Item의 정렬 방법을 설정
+
+  ////////////////////////
+  Order : Item 의 순서를 설정한다.
+  Items에 숫자를 지정하고 숫자가 클수록 순서가 밀림
+  음수가 허용됨
+
+  HTML구조와 상관없이 순서를 변경할 수 있기 때문에 유용함
+
+  숫자 : Item의 순서를 설정 / 기본값 : 0
+
+  order : 순서;
   </template>
 </head>
 <body>
-
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+  </div>
 </body>
 </html>
